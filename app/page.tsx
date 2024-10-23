@@ -1,9 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
-import RootLayout from "./layout";
-import {ArrowRight, Leaf, Recycle,Users,Coins,MapPin,ChevronRight} from "lucide-react";
+import {Leaf, Recycle,Users,Coins,MapPin} from "lucide-react";
 import {Button} from "@/components/ui/button";
-import { ElementType } from "react";
 function AnimatedGlobe() {
   return (
         <div className="relative w-32 h-32 mx-auto mb-8">
