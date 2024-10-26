@@ -73,21 +73,32 @@ bun dev
 
 ## Usage
 
-1. Fill the required details like tech stack, Experience etc and click on start Interview.
+1. Login to the Website using WEB3Authentication
    
-![Image stating how to enter the tech details](howtoenterdetails.png)
+![Image stating how to login](imagesreadme/login.png)
 
-2. Check the Tech details and Enable the Webcam and Microphone to start the Interview.
+2. Home Page of the Website.
 
-![Image stating how to enable webcam and microphone](enablemicrophoneandwebcam.png)
+![Image stating the home page of the website](imagesreadme/Home.png)
 
-3. Answer the Five Questions displayed to get the feedback.
+3. Waste Repport page.
 
-![image stating how to answer the interview](Interview_page.png)
+![image showing how to report waste](imagesreadme/Reportwaste.png)
 
-4. Checkout the feedback displayed by the ai which indicated detailed analysis of the answer during the Interview.
+4. Waste Collection Tasks Display page.
 
-![image stating the feedback of the interview](feedback_page.png)
+![image stating the waste collection](imagesreadme/Collectwaste.png)
+
+5. Waste verification page.
+![image stating how to collect the waste](imagesreadme/wasteverification.png)
+
+6. Rewards Page.
+
+![image stating the rewards collection](imagesreadme/rewardspage.png)
+
+7. Leaderboard page
+
+![image showing the leader boards](imagesreadme/LeaderBoard.png)
 
 
 ## Deployment
