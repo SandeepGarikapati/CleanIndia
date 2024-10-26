@@ -1,4 +1,4 @@
-## ![Icon](NirmalBhumi.png).
+## ![Icon](NirmalBhumi.png)
 
 ## Getting Started
 
