@@ -1,8 +1,6 @@
-//@ts-nocheck
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
   Menu,
@@ -13,7 +11,6 @@ import {
   User,
   ChevronDown,
   LogIn,
-  LogOut,
 } from "lucide-react";
 import { useMediaQuery } from "@/hook/useMediaQuerty";
 import {
@@ -34,7 +31,14 @@ import {
   markNotificationAsRead,
 } from "../utils/db/actions";
 
-const clientId = process.env.NEXT_PUBLIC_WEB3AUTH_CLIENT_ID;
+const clientId = process.env.NEXT_PUBLIC_WEB3AUTH_CLIENT_ID || "default-client-id";
+
+interface UserInfo {
+  email: string;
+  name: string;
+  [key: string]: unknown; // If there are additional properties you haven't defined yet
+}
+
 
 const chainConfig = {
   chainNamespace: CHAIN_NAMESPACES.EIP155,
@@ -49,7 +53,6 @@ const chainConfig = {
 
 const privateKeyProvider = new EthereumPrivateKeyProvider({
   config: { chainConfig },
-  privateKey: process.env.NEXT_PUBLIC_WEB3AUTH_PRIVATE_KEY,
 });
 
 const web3Auth = new Web3Auth({
@@ -67,8 +70,7 @@ export default function Header({ onMenuClick, totalEarnings }: HeaderProps) {
   const [provider, setProvider] = useState<IProvider | null>(null);
   const [loggedIn, setLoggedIn] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [userInfo, setUserInfo] = useState<any>(null);
-  const pathname = usePathname();
+  const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
   interface Notification {
     id: number;
     type: string;
@@ -87,7 +89,11 @@ export default function Header({ onMenuClick, totalEarnings }: HeaderProps) {
         if (web3Auth.connected) {
           setLoggedIn(true);
           const user = await web3Auth.getUserInfo();
-          setUserInfo(user);
+          setUserInfo({
+            ...user,
+            email: user.email || "unknown@example.com",
+            name: user.name || "Anonymous user",
+          });
 
           if (user.email) {
             localStorage.setItem("email", user.email);
@@ -170,7 +176,11 @@ export default function Header({ onMenuClick, totalEarnings }: HeaderProps) {
       setProvider(web3authprovider);
       setLoggedIn(true);
       const user = await web3Auth.getUserInfo();
-      setUserInfo(user);
+      setUserInfo({
+        ...user,
+        email: user.email || "unknown@example.com",
+        name: user.name || "Anonymous user",
+      });
       if (user.email) {
         localStorage.setItem("userEmail", user.email);
         try {
@@ -200,8 +210,13 @@ export default function Header({ onMenuClick, totalEarnings }: HeaderProps) {
   const getUserInfo = async () => {
     if (web3Auth.connected) {
       const user = await web3Auth.getUserInfo();
-      setUserInfo(user);
-
+      setUserInfo({
+        ...user,
+        email: user.email || "unknown@example.com",
+        name: user.name || "Anonymous user",
+      });
+      console.log(totalEarnings);
+      console.log(provider);
       if (user.email) {
         localStorage.setItem("email", user.email);
         try {
