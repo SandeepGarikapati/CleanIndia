@@ -1,4 +1,5 @@
-[!Icon-image](NirmalBhumi.png)
+## ![Icon](NirmalBhumi.png).
+
 ## Getting Started
 
 First, run the development server:
