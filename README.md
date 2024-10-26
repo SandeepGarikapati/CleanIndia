@@ -90,6 +90,7 @@ bun dev
 ![image stating the waste collection](imagesreadme/Collectwaste.png)
 
 5. Waste verification page.
+
 ![image stating how to collect the waste](imagesreadme/wasteverification.png)
 
 6. Rewards Page.
