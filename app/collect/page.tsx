@@ -70,7 +70,7 @@ export default function CollectPage() {
     quantityMatch: boolean;
     confidence: number;
   } | null>(null)
-  const [reward, setReward] = useState<number | null>(null)
+  
 
   const handleStatusChange = async (taskId: number, newStatus: CollectionTask['status']) => {
     if (!user) {
@@ -170,7 +170,7 @@ export default function CollectPage() {
           // Save the collected waste
           await saveCollectedWaste(selectedTask.id, user.id, parsedResult)
 
-          setReward(earnedReward)
+       
           toast.success(`Verification successful! You earned ${earnedReward} tokens!`, {
             duration: 5000,
             position: 'top-center',
