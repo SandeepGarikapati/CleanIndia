@@ -148,6 +148,7 @@ export default function ReportPage() {
         }
       } catch (error) {
         console.error('Failed to parse JSON response:', text);
+        console.log('Error:', error);
         setVerificationStatus('failure');
       }
     } catch (error) {
@@ -172,8 +173,12 @@ export default function ReportPage() {
         newReport.amount,
         preview || undefined,
         verificationResult ? JSON.stringify(verificationResult) : undefined
-      ) as any;
+      );
       
+      if (!report) {
+        throw new Error('Failed to create report.');
+      }
+
       const formattedReport = {
         id: report.id,
         location: report.location,
