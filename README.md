@@ -1,4 +1,4 @@
-## NirmalBhumi
+[!Icon-image](https://github.com/SandeepGarikapati/CleanIndia/blob/425876238a8dc672db8a6176ebffa2372f683b4f/NirmalBhumi.png)
 ## Getting Started
 
 First, run the development server:
