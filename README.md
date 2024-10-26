@@ -4,10 +4,60 @@ This web application leverages Gemini AI to streamline waste management. Users u
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![PostgressSql](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) ![Drizzleorm](https://img.shields.io/badge/drizzle-C5F74F?style=for-the-badge&logo=drizzle&logoColor=black) ![Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) 
 
+## Table of contents
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Features
+- **AI-Powered Waste Classification**: Automatically identifies waste type (e.g., plastic, paper, metal) and estimates quantity using Gemini AI.
+- **User Submission Portal**: Allows users to upload waste images for analysis and submit them for verification.
+- **Verifier Photo Matching**: Enables verifiers to upload a photo of the collected waste for matching with the original submission.
+- **Reward Points System**: Awards points to waste collectors upon successful verification, incentivizing waste collection and recycling.
+- **Admin Dashboard**: Provides an admin view to manage submissions, verifications, and track reward distributions.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisties
+Before you begin please make sure to install this prerequisities
+-Node.js (v18 or higher)
+-npm or yarn
+-neon Database account
+-Drizzle orm
+-Vs code or similar IDE'S
+
+### Installation
+1. Clone the repository
+   ```
+   git clone https://github.com/SandeepGarikapati/CleanIndia.git
+
+   ```
+2. Install the Dependencies
+   ```
+   npm install
+   # or
+   yarn install
+
+   ```
+
+### Running the Application
+1. Setup the .env.local file with required api keys
+
+```env
+NEXT_PUBLIC_WEB3AUTH_CLIENT_ID = WEB3AUTH api for Authentication related services.
+DATABASE_URL = Database url from postgress sql.
+NEXT_PUBLIC_GEMINI_API_KEY = Gemini API Key
+NEXT_PUBLIC_MAPS_API_KEY = Google Maps API Key.
+```
+
+2. First, run the development server:
 
 ```bash
 npm run dev
@@ -19,23 +69,61 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Fill the required details like tech stack, Experience etc and click on start Interview.
+   
+![Image stating how to enter the tech details](howtoenterdetails.png)
 
-## Learn More
+2. Check the Tech details and Enable the Webcam and Microphone to start the Interview.
 
-To learn more about Next.js, take a look at the following resources:
+![Image stating how to enable webcam and microphone](enablemicrophoneandwebcam.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Answer the Five Questions displayed to get the feedback.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![image stating how to answer the interview](Interview_page.png)
 
-## Deploy on Vercel
+4. Checkout the feedback displayed by the ai which indicated detailed analysis of the answer during the Interview.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![image stating the feedback of the interview](feedback_page.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Deployment
+
+To deploy the application on Vercel:
+
+1. Push your project to a GitHub repository.
+2. Go to the Vercel dashboard and import your repository.
+3. Set up your environment variables in the Vercel project settings.
+4. Deploy the project. Vercel will automatically build and deploy your application.
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shad cn UI](https://ui.shadcn.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Speech to text cnvertor](https://www.npmjs.com/package/react-hook-stt-fork)
+- [Drizzle orm](https://www.npmjs.com/package/drizzle-orm)
+- [Vercel](https://vercel.com/)
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature-name`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/your-feature-name`).
+6. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+Thank you for using Nirmal-Bharath. Contribute to cleanliness, dispose of waste the right way!
