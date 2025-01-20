@@ -81,7 +81,7 @@ bun dev
 
 ![Image stating the home page of the website](imagesreadme/Home.png)
 
-3. Waste Repport page.
+3. Waste Report page.
 
 ![image showing how to report waste](imagesreadme/Reportwaste.png)
 
