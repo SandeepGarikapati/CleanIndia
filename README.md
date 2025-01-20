@@ -117,7 +117,7 @@ To deploy the application on Vercel:
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Shad cn UI](https://ui.shadcn.com/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Speech to text cnvertor](https://www.npmjs.com/package/react-hook-stt-fork)
+- [Speech to text convertor](https://www.npmjs.com/package/react-hook-stt-fork)
 - [Drizzle orm](https://www.npmjs.com/package/drizzle-orm)
 - [Vercel](https://vercel.com/)
 
